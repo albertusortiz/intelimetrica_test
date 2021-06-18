@@ -1,5 +1,16 @@
-from flask import Flask, jsonify
+import os
 
+from flask import Flask, jsonify
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+
+HOST = os.getenv('HOST')
+DATABASE = os.getenv('DATABASE')
+USER = os.getenv('USER')
+PASSWORD = os.getenv('PASSWORD')
 
 app = Flask(__name__)
 
