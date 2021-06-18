@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hola Mundo"
+    print("Welcome to Intelimetrica Test Backend")
+    result = {'message': 'Index', 'status': '200', 'payload': []}
+    return jsonify(result), 200
 
 
 if __name__ == '__main__':
