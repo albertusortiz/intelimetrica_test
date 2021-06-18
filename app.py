@@ -13,11 +13,9 @@ HOST = os.getenv('HOST')
 DATABASE = os.getenv('DATABASE')
 USERNAME_DATABASE = os.getenv('USERNAME_DATABASE')
 PASSWORD = os.getenv('PASSWORD')
+PORT = os.getenv('PORT')
+HOST_BACK = os.getenv('HOST_BACK')
 
-print("HOST:",HOST)
-print("DATABASE:",DATABASE)
-print("USERNAME_DATABASE:",USERNAME_DATABASE)
-print("PASWORD:",PASSWORD)
 
 app = Flask(__name__)
 
@@ -58,4 +56,4 @@ def read():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=PORT,host=HOST_BACK)
